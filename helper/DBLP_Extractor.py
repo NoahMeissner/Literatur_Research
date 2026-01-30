@@ -32,7 +32,7 @@ class DBLPConferenceExtractor:
         year_end: int = 2025,
         max_results: Optional[int] = None,
         verbose: bool = False,
-        console_output: bool = False  # NEU: Console-Ausgabe an/aus
+        console_output: bool = False 
     ) -> List[Dict]:
         
         all_papers = []

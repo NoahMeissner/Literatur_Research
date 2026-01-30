@@ -15,10 +15,8 @@ def clean_html_entities(df):
     pd.DataFrame
         DataFrame with decoded text
     """
-    # Kopie erstellen
     df_cleaned = df.copy()
     
-    # Alle text columns bereinigen
     text_columns = ['title', 'authors']
     
     for col in text_columns:
@@ -32,7 +30,7 @@ def clean_html_entities(df):
 
 def detect_german_titles(df, conference: str = "KI"):
     """
-    Detect German titles using langdetect (faster, simpler).
+    Detect German titles using langdetect.
     """
     def safe_detect(text):
         try:
