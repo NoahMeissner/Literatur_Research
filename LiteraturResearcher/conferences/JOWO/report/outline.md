@@ -79,7 +79,7 @@ Interactive visualizations were built with Plotly in `03_Analysis.ipynb`:
 | 2024 | **38.9** | 20.7 | 24.5 | 11.6 | 4.3 | 79 |
 | 2025 | 28.1 | 17.1 | 36.4 | 17.1 | 1.3 | 70 |
 
-![Thematic Shares by Year](../img/thematich_shares_stacked.png)
+![](../img/thematich_shares_stacked.png)
 
 #### Trend summary
 ![](../img/heatmap_shares.png)
