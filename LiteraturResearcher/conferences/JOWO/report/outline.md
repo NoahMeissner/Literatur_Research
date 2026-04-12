@@ -82,18 +82,17 @@ Interactive visualizations were built with Plotly in `03_Analysis.ipynb`:
 ![Thematic Shares by Year](../img/thematich_shares_stacked.png)
 
 #### Trend summary
-\img[../img/heatmap_shares.png]
-\img[../img/thematic_shares_line.png]
-\img[../img/vertical_plot_keywords.png]
+![](../img/heatmap_shares.png)
+![](../img/thematic_shares_line.png)
+![](../img/vertical_plot_keywords.png)
 
 ---
 
 ### 3.2 RQ2 — JOWO vs. FOIS
 > *FOIS coverage: 7 editions (2016, 2018, 2020, 2021, 2023, 2024, 2025), 145 papers. Comparison uses average cluster shares across all available editions. Direct year-by-year comparison is not used due to FOIS's biennial publication schedule.*
-
-\img[../img/radar_fois_jowo.png]
-\img[../img/plot_category_comparison_jowo_fois.png]
-\img[../img/jowo_vs.fois_cluster_share.png]
+![](../img/radar_fois_jowo.png)
+![](../img/plot_category_comparison_jowo_fois.png)
+![](../img/jowo_vs.fois_cluster_share.png)
 
 
 ## 4. Discussion & Limitations
