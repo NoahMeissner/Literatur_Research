@@ -62,8 +62,6 @@ Detailed findings, research questions, and analysis results are documented in th
 |---|---|
 | JOWO & FOIS (2017–2025) | [conferences/JOWO/report/outline.md](conferences/JOWO/report/outline.md) |
 
-> Add a new row for each additional conference study.
-
 ---
 
 ## PDF Extraction Pipeline
@@ -111,7 +109,7 @@ Create a `.env` file in the project root (for Open Alex):
 ```env
 MY_EMAIL = 
 API_KEY = 
-
+```
 ### Run a conference analysis
 
 ```
