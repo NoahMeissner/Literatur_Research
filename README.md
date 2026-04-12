@@ -106,13 +106,11 @@ ollama pull embeddinggemma  # for keyword clustering
 
 ### Environment
 
-Create a `.env` file in the project root:
+Create a `.env` file in the project root (for Open Alex):
 
 ```env
-SEMANTIC_SCHOLAR_API_KEY=your_key_here
-```
-
-> ⚠️ Never commit `.env` to a public repository.
+MY_EMAIL = 
+API_KEY = 
 
 ### Run a conference analysis
 
