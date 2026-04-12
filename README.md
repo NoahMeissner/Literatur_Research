@@ -1,14 +1,12 @@
 # LiteraturResearcher
 
-> An automated pipeline for the systematic extraction, clustering, and thematic analysis of scientific publications — with a dedicated case study on the Joint Ontology Workshops (JOWO) and FOIS.
+> An automated pipeline for the systematic extraction, clustering, and thematic analysis of scientific publications — designed for multi-conference bibliometric studies.
 
 ---
 
 ## What This Project Does
 
 `LiteraturResearcher` collects paper metadata from scientific databases, extracts abstracts and keywords from PDFs using a multi-stage LLM-assisted pipeline, clusters keywords into thematic topics, and produces interactive visualizations to answer bibliometric research questions.
-
-**Current case study:** *Ten years of JOWO (2017–2025) — topic evolution and comparison to FOIS.*
 
 ### Key capabilities
 
@@ -40,54 +38,31 @@ LiteraturResearcher/
 │   ├── 03_Open_Alex.ipynb        # OpenAlex enrichment
 │   └── evaluate_extraction.ipynb # LLM extraction quality evaluation
 │
-├── conferences/
-│   └── JOWO/                     # JOWO & FOIS case study
+├── conferences/                  # One subdirectory per conference / case study
+│   └── <ConferenceName>/
 │       ├── notebooks/
-│       │   ├── 01_Extraction.ipynb   # DBLP pull + PDF extraction for JOWO/FOIS
+│       │   ├── 01_Extraction.ipynb   # DBLP pull + PDF extraction
 │       │   ├── 02_Cluster.ipynb      # Keyword embedding + K-Means clustering
-│       │   └── 04_Analysis.ipynb     # RQ1 & RQ2 visualizations (Plotly)
+│       │   └── 04_Analysis.ipynb     # Research question visualizations (Plotly)
 │       └── report/
 │           └── outline.md            # Full analysis report
 │
 └── data/
-    ├── raw/conferences/ontology/
-    │   ├── jowo_fois_with_abstracts.csv       # 637 papers with extracted abstracts & keywords
-    │   └── jowo_fois_cluster_keywords.csv     # Keyword→cluster frequency table
+    ├── raw/conferences/
     └── processed/
 ```
 
 ---
 
-## JOWO Case Study — Research Questions
+## Case Studies & Reports
 
-### RQ1 — How has JOWO evolved thematically over the past ten years?
+Detailed findings, research questions, and analysis results are documented in the respective conference reports:
 
-Based on 492 JOWO papers (2017–2025), keyword clusters were tracked across years:
+| Conference | Report |
+|---|---|
+| JOWO & FOIS (2017–2025) | [conferences/JOWO/report/outline.md](conferences/JOWO/report/outline.md) |
 
-| Cluster | Avg. share | Trend |
-|---|---:|---|
-| Formal Ontology Concepts | ~34% | → stable (volatile) |
-| Knowledge Graphs & AI | ~26% | **▲ +1.84%/yr** |
-| Ontology Engineering | ~19% | ▼ slight decline |
-| Mereology & Cognition | ~19% | → stable |
-| Conceptual Modeling | ~2% | → marginal niche |
-
-**Key finding:** JOWO shows a gradual applied turn — Knowledge Graphs & AI peaked at **38.9% in 2024**, while foundational topics (Mereology, Formal Ontology) are proportionally declining.
-
-### RQ2 — How does JOWO compare to FOIS?
-
-Based on 145 FOIS papers across 7 biennial editions (2016–2025):
-
-| Cluster | JOWO | FOIS | Δ |
-|---|---:|---:|---:|
-| Knowledge Graphs & AI | 26.0% | 15.6% | **+10.4 pp** |
-| Formal Ontology Concepts | 34.1% | 38.4% | −4.2 pp |
-| Mereology & Cognition | 18.6% | 22.0% | −3.4 pp |
-| Ontology Engineering | 18.9% | 21.6% | −2.7 pp |
-
-**Key finding:** FOIS anchors foundational/philosophical ontology (~60% of topics in Formal Ontology + Mereology); JOWO increasingly embraces applied AI/KG work. The +10.4 pp gap in Knowledge Graphs & AI is the clearest structural difference.
-
-> ⚠️ FOIS is biennial — year-by-year trend comparisons are not used; aggregate means and per-edition divergence heatmaps are used instead.
+> Add a new row for each additional conference study.
 
 ---
 
@@ -139,20 +114,19 @@ SEMANTIC_SCHOLAR_API_KEY=your_key_here
 
 > ⚠️ Never commit `.env` to a public repository.
 
-### Run the JOWO analysis
+### Run a conference analysis
 
 ```
-1. conferences/JOWO/notebooks/01_Extraction.ipynb   ← collect papers + extract PDFs
-2. conferences/JOWO/notebooks/02_Cluster.ipynb       ← embed + cluster keywords
-3. conferences/JOWO/notebooks/04_Analysis.ipynb      ← visualize RQ1 & RQ2
+1. conferences/<Name>/notebooks/01_Extraction.ipynb   ← collect papers + extract PDFs
+2. conferences/<Name>/notebooks/02_Cluster.ipynb       ← embed + cluster keywords
+3. conferences/<Name>/notebooks/04_Analysis.ipynb      ← visualize research questions
 ```
 
-The full report is in [`conferences/JOWO/report/outline.md`](conferences/JOWO/report/outline.md).
+See the corresponding `report/outline.md` inside the conference folder for full results and interpretation.
 
 ---
 
 ## Data Notes
 
 - Raw data lives in `data/raw/` and is excluded from version control (see `.gitignore`).
-- JOWO 2015 and 2016 are listed in DBLP but could not be extracted — analysis starts at 2017.
-- FOIS coverage: 7 editions (2016, 2018, 2020, 2021, 2023, 2024, 2025).
+- Each conference folder manages its own extracted datasets under `data/raw/conferences/`.
