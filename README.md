@@ -62,8 +62,6 @@ Detailed findings, research questions, and analysis results are documented in th
 |---|---|
 | JOWO & FOIS (2017–2025) | [conferences/JOWO/report/outline.md](conferences/JOWO/report/outline.md) |
 
-> Add a new row for each additional conference study.
-
 ---
 
 ## PDF Extraction Pipeline
@@ -106,14 +104,12 @@ ollama pull embeddinggemma  # for keyword clustering
 
 ### Environment
 
-Create a `.env` file in the project root:
+Create a `.env` file in the project root (for Open Alex):
 
 ```env
-SEMANTIC_SCHOLAR_API_KEY=your_key_here
+MY_EMAIL = 
+API_KEY = 
 ```
-
-> ⚠️ Never commit `.env` to a public repository.
-
 ### Run a conference analysis
 
 ```
