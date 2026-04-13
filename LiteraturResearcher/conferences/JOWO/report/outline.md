@@ -49,7 +49,7 @@ To identify high-level topics, extracted keywords were clustered using the follo
 
 1. **Semantic Embeddings**: Each unique keyword was embedded using the `embeddinggemma` model (via Ollama), capturing distributional meaning.
 2. **Dimensionality Reduction**: Embeddings were L2-normalized and reduced to 30 dimensions with PCA.
-3. **Optimized K-Means**: K-Means was applied for $k \in [5, 24]$; the Silhouette Score selected $k = 5$ as optimal. The 8 raw clusters were then merged by hand into 5 interpretable macro-clusters based on the most frequent keywords in each:
+3. **Optimized K-Means**: K-Means was applied for $k \in [5, 24]$; the Silhouette Score selected $k = 5$ as optimal. The 5 raw clusters were then merged by hand into 5 interpretable macro-clusters based on the most frequent keywords in each:
 
 | Cluster ID | Representative keywords | Macro-label |
 |---|---|---|
