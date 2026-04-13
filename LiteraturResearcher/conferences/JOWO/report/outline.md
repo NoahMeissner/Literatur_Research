@@ -32,7 +32,7 @@ conference_dict = {
 Since DBLP does not provide abstracts, a custom **PDF Extraction Pipeline** was used to extract abstracts and keywords directly from the papers (see `01_Extraction.ipynb`).
 
 #### PDF Extraction Pipeline
-A fault-tolerant, multi-stage pipeline:
+A multi-stage pipeline:
 
 1. **Download & Parsing**: PDFs are downloaded from CEUR-WS / IOS Press and the first 5 pages are parsed using `PyMuPDF`.
 2. **Regex Extraction** *(fast path)*: Regular expressions attempt to locate abstract and keyword sections by matching structural markers (e.g., "Abstract", "Keywords:").
