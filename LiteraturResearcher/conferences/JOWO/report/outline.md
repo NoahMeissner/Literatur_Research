@@ -1,6 +1,6 @@
 # JOWO Topic Analysis — Report Outline
-*Noah Meissner^1, Bernd Ludwig^1*
-^1 Chair of Information Science, University of Regensburg
+Noah Meissner<sup>1</sup>, Bernd Ludwig<sup>1</sup>
+<sup>1</sup> Chair of Information Science, University of Regensburg
 
 ---
 
