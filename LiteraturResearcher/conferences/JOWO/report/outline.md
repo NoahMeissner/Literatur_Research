@@ -1,4 +1,4 @@
-# JOWO Topic Analysis — Report Outline
+# Tracking Thematic Shifts in the Joint Ontology Workshops: A Keyword-Based Analysis
 Noah Meissner<sup>1</sup>, Bernd Ludwig<sup>1</sup>
 <sup>1</sup> Chair of Information Science, University of Regensburg
 
