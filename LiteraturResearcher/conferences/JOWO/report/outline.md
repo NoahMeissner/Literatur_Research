@@ -1,5 +1,5 @@
 # JOWO Topic Analysis — Report Outline
-*Noah Meissner*
+*Noah Meissner, Bernd Ludwig*
 
 ---
 
