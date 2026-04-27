@@ -1,6 +1,5 @@
-# Tracking Thematic Shifts in the Joint Ontology Workshops: A Keyword-Based Analysis
-Noah Meissner<sup>1</sup>, Bernd Ludwig<sup>1</sup>
-<sup>1</sup> Chair of Information Science, University of Regensburg
+# JOWO Topic Analysis — Report Outline
+*Noah Meissner*
 
 ---
 
@@ -33,7 +32,7 @@ conference_dict = {
 Since DBLP does not provide abstracts, a custom **PDF Extraction Pipeline** was used to extract abstracts and keywords directly from the papers (see `01_Extraction.ipynb`).
 
 #### PDF Extraction Pipeline
-A multi-stage pipeline:
+A fault-tolerant, multi-stage pipeline:
 
 1. **Download & Parsing**: PDFs are downloaded from CEUR-WS / IOS Press and the first 5 pages are parsed using `PyMuPDF`.
 2. **Regex Extraction** *(fast path)*: Regular expressions attempt to locate abstract and keyword sections by matching structural markers (e.g., "Abstract", "Keywords:").
@@ -50,7 +49,7 @@ To identify high-level topics, extracted keywords were clustered using the follo
 
 1. **Semantic Embeddings**: Each unique keyword was embedded using the `embeddinggemma` model (via Ollama), capturing distributional meaning.
 2. **Dimensionality Reduction**: Embeddings were L2-normalized and reduced to 30 dimensions with PCA.
-3. **Optimized K-Means**: K-Means was applied for $k \in [5, 24]$; the Silhouette Score selected $k = 5$ as optimal. The 5 raw clusters were then merged by hand into 5 interpretable macro-clusters based on the most frequent keywords in each:
+3. **Optimized K-Means**: K-Means was applied for $k \in [5, 24]$; the Silhouette Score selected $k = 5$ as optimal. The 8 raw clusters were then merged by hand into 5 interpretable macro-clusters based on the most frequent keywords in each:
 
 | Cluster ID | Representative keywords | Macro-label |
 |---|---|---|
